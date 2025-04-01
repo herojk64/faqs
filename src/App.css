@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('./assets/fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* Supports variable weights */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('./assets/fonts/WorkSans-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+@theme {
+  /* Fonts */
+  --font-work-sans: 'WorkSans';
+  /* Colors */
+  --color-light-pink: #f9f0ff;
+  --color-grayish-purple: #8c6991;
+  --color-Dark-purple: #2f1533;
+  --color-white: #ffffff;
+}
+
+body{
+    @apply bg-grayish-purple;
+}
+
+.App{
+    @apply p-3 flex items-center justify-center font-work-sans min-h-screen bg-light-pink bg-[url('./assets/images/background-pattern-mobile.svg')] md:bg-[url('./assets/images/background-pattern-desktop.svg')] bg-no-repeat;
+    background-position: top left;
+    background-size: 100%;
+
+}
